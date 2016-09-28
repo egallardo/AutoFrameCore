@@ -1,0 +1,45 @@
+28/09/2016 09:19:35 devpinoyLogger Starting csv import process....
+28/09/2016 09:19:35 devpinoyLogger Reading csv file
+28/09/2016 09:19:35 devpinoyLogger CSV File imported, ok
+28/09/2016 09:19:35 devpinoyLogger Starting csv import process....
+28/09/2016 09:19:35 devpinoyLogger Reading csv file
+28/09/2016 09:19:35 devpinoyLogger CSV File imported, ok
+28/09/2016 09:19:35 devpinoyLogger Starting test execution test.AddMultipleCompanyDetailsTest
+28/09/2016 09:19:35 devpinoyLogger Printing imported data:
+28/09/2016 09:19:35 devpinoyLogger 1 U A 0 ATB Single Company Auto #1 321BankStreet Montreal QC K0M1A0 AndrewPasquale 9999999999 9999999999 andrew.pasquale@telus.com E 0 1000   9999  1 0 N N Y 1.1 Y 1 Y 1.3 N N Y 1.5 Y 1.6 Y 1.7 N N Y 1.9 Y 0 Y 0 Y 12345 999999999  N    0 1
+28/09/2016 09:19:35 devpinoyLogger Initializing WebDriver
+28/09/2016 09:19:38 devpinoyLogger Login into the application
+28/09/2016 09:19:47 devpinoyLogger Loading Menu Elements
+28/09/2016 09:19:53 devpinoyLogger Loading Company Elements
+28/09/2016 09:19:54 devpinoyLogger Filling  Company Information form with data provider information
+28/09/2016 09:20:02 devpinoyLogger Cleaning form
+28/09/2016 09:20:07 devpinoyLogger Marking Billing Information options Selected
+28/09/2016 09:20:08 devpinoyLogger Adding Bank Account
+28/09/2016 09:20:13 devpinoyLogger Starting test execution test.AddMultipleCompanyDetailsTest
+28/09/2016 09:20:13 devpinoyLogger Printing imported data:
+28/09/2016 09:20:13 devpinoyLogger 1 U A 0 BAML Single Company Auto #2 321BankStreet Montreal QC K0M1A0 AndrewPasquale 9999999999 9999999999 andrew.pasquale@telus.com E 0 1000   9999  1 0 N N Y 1.1 Y 1 Y 1.3 N N Y 1.5 Y 1.6 Y 1.7 N N Y 1.9 Y 0 Y 0 Y 12345 999999999  N    0 1
+28/09/2016 09:20:13 devpinoyLogger Initializing WebDriver
+28/09/2016 09:20:15 devpinoyLogger Login into the application
+28/09/2016 09:20:26 devpinoyLogger Loading Menu Elements
+28/09/2016 09:20:26 devpinoyLogger Starting test execution test.AddMultipleCompanyDetailsTest
+28/09/2016 09:20:26 devpinoyLogger Printing imported data:
+28/09/2016 09:20:26 devpinoyLogger 1 U A 0 JPMC Single Company Auto #3 321BankStreet Montreal QC K0M1A0 AndrewPasquale 9999999999 9999999999 andrew.pasquale@telus.com E 0 1000   9999  1 0 N N Y 1.1 Y 1 Y 1.3 N N Y 1.5 Y 1.6 Y 1.7 N N Y 1.9 Y 0 Y 0 Y 12345 999999999  N    0 1
+28/09/2016 09:20:26 devpinoyLogger Initializing WebDriver
+28/09/2016 09:20:29 devpinoyLogger Login into the application
+28/09/2016 09:20:38 devpinoyLogger Loading Menu Elements
+28/09/2016 09:20:44 devpinoyLogger Loading Company Elements
+28/09/2016 09:20:45 devpinoyLogger Filling  Company Information form with data provider information
+28/09/2016 09:20:53 devpinoyLogger Cleaning form
+28/09/2016 09:20:58 devpinoyLogger Marking Billing Information options Selected
+28/09/2016 09:20:58 devpinoyLogger Adding Bank Account
+28/09/2016 09:21:04 devpinoyLogger Starting test execution test.AddMultipleCompanyDetailsTest
+28/09/2016 09:21:04 devpinoyLogger Printing imported data:
+28/09/2016 09:21:04 devpinoyLogger 1 U A 0 KEB Single Company Auto #4 321BankStreet Montreal QC K0M1A0 AndrewPasquale 9999999999 9999999999 andrew.pasquale@telus.com E 0 1000   9999  1 0 N N Y 1.1 Y 1 Y 1.3 N N Y 1.5 Y 1.6 Y 1.7 N N Y 1.9 Y 0 Y 0 Y 12345 999999999  N    0 1
+28/09/2016 09:21:04 devpinoyLogger Initializing WebDriver
+28/09/2016 09:21:06 devpinoyLogger Login into the application
+28/09/2016 09:21:18 devpinoyLogger Loading Menu Elements
+28/09/2016 09:21:24 devpinoyLogger Loading Company Elements
+28/09/2016 09:21:25 devpinoyLogger Filling  Company Information form with data provider information
+28/09/2016 09:21:33 devpinoyLogger Cleaning form
+28/09/2016 09:21:38 devpinoyLogger Marking Billing Information options Selected
+28/09/2016 09:21:39 devpinoyLogger Adding Bank Account

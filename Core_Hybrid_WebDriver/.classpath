@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="jars-core/commons-beanutils-1.8.0.jar"/>
+	<classpathentry kind="lib" path="jars-core/derbyclient.jar"/>
+	<classpathentry kind="lib" path="jars-core/dom4j-1.1.jar"/>
+	<classpathentry kind="lib" path="jars-core/eclipselink-2.0.0.jar"/>
+	<classpathentry kind="lib" path="jars-core/flash-selenium.jar"/>
+	<classpathentry kind="lib" path="jars-core/FrameWork.xlsx"/>
+	<classpathentry kind="lib" path="jars-core/javax.persistence-2.0.0.jar"/>
+	<classpathentry kind="lib" path="jars-core/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="jars-core/logging-selenium-1.2.jar"/>
+	<classpathentry kind="lib" path="jars-core/mail.jar"/>
+	<classpathentry kind="lib" path="jars-core/mysql-connector-java-5.0.7-bin(2).jar"/>
+	<classpathentry kind="lib" path="jars-core/poi-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="jars-core/poi-ooxml-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="jars-core/poi-ooxml-schemas-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="jars-core/saxon-8.7.jar"/>
+	<classpathentry kind="lib" path="jars-core/SaxonLiaison.jar"/>
+	<classpathentry kind="lib" path="jars-core/TestData.xlsx"/>
+	<classpathentry kind="lib" path="jars-core/testng-6.8.5.jar"/>
+	<classpathentry kind="lib" path="jars-core/validation-api-1.0.0.GA.jar"/>
+	<classpathentry kind="lib" path="jars-core/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="jars-core/selenium-java-3.0.0-beta3/client-combined-3.0.0-beta3-nodeps.jar"/>
+	<classpathentry kind="lib" path="jars-core/selenium-server-standalone-3.0.0-beta3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
