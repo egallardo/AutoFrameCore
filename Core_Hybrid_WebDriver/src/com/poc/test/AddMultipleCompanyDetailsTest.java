@@ -8,12 +8,17 @@ import java.util.HashMap;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.Assertion;
 
+import com.gargoylesoftware.htmlunit.javascript.host.Element;
 import com.poc.model.AddPFSCompanyDetails;
 import com.poc.uidriver.AddPFSCompanyDetailsConstants;
 import com.poc.util.CsvReader;
@@ -34,7 +39,8 @@ public class AddMultipleCompanyDetailsTest extends AddPFSCompanyDetailsConstants
 	Object[][] data;
 	HashMap<Object,String> parameters = new HashMap<Object, String>();
 	public static Logger APP_LOGS;
-
+	WebDriver driver;
+	WebDriverWait wait;
 
 
 	@BeforeTest
@@ -209,17 +215,29 @@ public class AddMultipleCompanyDetailsTest extends AddPFSCompanyDetailsConstants
 		parameters.put(companyConstants.enum_dpd_emailNotificationId,emailNotification);
 
 		// Optional, if not specified, WebDriver will search your path for chromedriver.
-		//System.setProperty("webdriver.chrome.driver", "C:/Users/elmer.gallardo/Documents/POC/chromedriver.exe");
+		
 		APP_LOGS.debug("Initializing WebDriver");
-		System.setProperty("webdriver.gecko.driver", "C:/Users/elmer.gallardo/Documents/POC/geckodriver-v0.10.0-win64/geckodriver.exe");
-		//DesiredCapabilities caps = DesiredCapabilities.chrome();        
-		//WebDriver driver = new ChromeDriver(caps);
-		WebDriver driver = new FirefoxDriver();
+/*		//System.setProperty("webdriver.gecko.driver", "C:/Users/elmer.gallardo/Documents/POC/geckodriver-v0.10.0-win64/geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:/Users/elmer.gallardo/Documents/POC/chromedriver.exe");
+		DesiredCapabilities caps = DesiredCapabilities.chrome();        
+		WebDriver driver = new ChromeDriver(caps);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		//WebDriver driver = new FirefoxDriver();
+		 
+*/		
+		//You can Use Chrome or Firefox
+		driver = Utils.configureWebDriver(driver, "Firefox");
+		
+		wait = new WebDriverWait(driver, 30);
+		driver.manage().window().maximize(); 
 		login("224100056", "Password*1" ,driver);
 		APP_LOGS.debug("Loading Menu Elements");
 		loadMenuWebElments(driver);
 		ui_menu.click();
+		ui_menu.click();
 		Thread.sleep(3000);
+		//wait.until(ExpectedConditions.elementToBeClickable(ui_menu_addPfsCompany));
 		ui_menu_addPfsCompany.click();
 		Thread.sleep(3000);
 		//loading webelements with xpath in the form
@@ -228,7 +246,7 @@ public class AddMultipleCompanyDetailsTest extends AddPFSCompanyDetailsConstants
 		APP_LOGS.debug("Filling  Company Information form with data provider information");
 		Thread.sleep(2000);
 		JavascriptExecutor js =Utils.executejQuery("fiNumberId_input",fiNumber,driver);//"fiNumberId_input","1",driver
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		//Refreshing Web Element
 		js.executeScript("$('select[id*=\""+ "fiNumberId_input" + "\"]').val(\""+fiNumber+"\").trigger(\"change\");");
 		Thread.sleep(3000);
@@ -237,7 +255,7 @@ public class AddMultipleCompanyDetailsTest extends AddPFSCompanyDetailsConstants
 		Utils.executejQuery("userTypeId_input",usertype,driver);//"userTypeId_input","U",driver 
 		Utils.executejQuery("statusId_input",status,driver);//"statusId_input","R",driver
 		Utils.executejQuery("adminTypeId_input",admintype,driver);//"adminTypeId_input","0",driver
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		webNameId.sendKeys(webName);
 		addressId1.sendKeys(address);
 		addressId2.sendKeys(address);
@@ -288,15 +306,16 @@ public class AddMultipleCompanyDetailsTest extends AddPFSCompanyDetailsConstants
 			Assertion.fail("Not able to click Add Account Button" + "\n" + e.getMessage() );
 
 		}
-		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+//		Thread.sleep(1000);
 		Utils.executejQuery("emailNotificationId_input",emailNotification,driver);
 		btn_Add.click();
 		//btn_ClearAll.click();
 		//btn_Cancel.click();
-		Utils.waitForPageToLoad(driver);
+		//Utils.waitForPageToLoad(driver);
 		Thread.sleep(5000);
 		Assertion.assertEquals(driver.getPageSource().contains("The new PFS company is pending authorization."), true);
-		driver.close();
+		driver.quit();
+		
 	}
 	private void cleanForm(WebDriver driver) {
 		APP_LOGS.debug("Cleaning form");
